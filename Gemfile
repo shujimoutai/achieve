@@ -60,3 +60,6 @@ end
   gem 'jquery-turbolinks'
   
   gem "kaminari"
+  
+  gem 'rails_12factor', group: :production
+  
