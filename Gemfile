@@ -53,6 +53,9 @@ group :development, :test do
   gem 'binding_of_caller'
   
   gem "bullet"
+  
+  gem 'letter_opener_web'
+  
 end
 
   gem 'twitter-bootstrap-rails'
@@ -64,3 +67,16 @@ end
   gem 'rails_12factor', group: :production
   
   gem 'devise'
+  
+  gem 'faker'
+  
+  gem 'rails_admin'
+  
+  gem 'cancan'
+  
+  gem 'activeresource' 
+  
+  gem 'omniauth'
+  gem 'omniauth-twitter'
+  gem 'omniauth-facebook'
+  
