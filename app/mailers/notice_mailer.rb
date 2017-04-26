@@ -13,4 +13,14 @@ class NoticeMailer < ApplicationMailer
     mail to: "shujimoutai@gmail.com",
          subject: '【Achieve】ブログが投稿されました'
   end
+
+  def sendmail_contact(contact)
+      @contact = contact
+
+      @greeting = "Hi"
+
+      mail to: "shujimoutai@gmail.com",
+           subject: '【Achieve】お問い合わせが完了しました'
+  end
+
 end

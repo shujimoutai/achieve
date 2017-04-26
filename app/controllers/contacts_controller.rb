@@ -1,5 +1,5 @@
 class ContactsController < ApplicationController
-  
+
   def new
     if params[:back]
       @contact = Contact.new(contacts_params)
@@ -16,11 +16,12 @@ class ContactsController < ApplicationController
   def create
     Contact.create(contacts_params)
     redirect_to root_path, notice: 'お問い合わせが完了しました！'
+    NoticeMailer.sendmail_contact(@contact).deliver
   end
-  
+
   private
    def contacts_params
      params.require(:contact).permit(:name,:email,:content)
    end
-  
+
 end
