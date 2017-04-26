@@ -14,9 +14,9 @@ class ContactsController < ApplicationController
   end
 
   def create
-    Contact.create(contacts_params)
+    @contact=Contact.create(contacts_params)
     redirect_to root_path, notice: 'お問い合わせが完了しました！'
-    InquiryMailer.sendmail_contact(@contact).deliver
+    NoticeMailer.sendmail_contact(@contact).deliver
   end
 
   private
