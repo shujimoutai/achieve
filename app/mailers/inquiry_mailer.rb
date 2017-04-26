@@ -10,7 +10,7 @@ class InquiryMailer < ApplicationMailer
 
       @greeting = "Hi"
 
-      mail to: "<%= @contact.email %>",
+      mail to: "@contact.email",
            subject: '【Achieve】お問い合わせが完了しました'
   end
 end
