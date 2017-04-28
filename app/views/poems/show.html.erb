@@ -1,13 +1,6 @@
-<p id="notice"><%= notice %></p>
+<h1>詳細</h1>
 
-<p>
-  <strong>Title:</strong>
-  <%= @poem.title %>
-</p>
+<p>タイトル:<%= @poem.title %></p>
+<p>内容:<%= @poem.content %></p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @poem.content %>
-</p>
-
-<%= link_to 'Back', poems_path %>
+<p><%= link_to "一覧へ", poems_path %></p>
