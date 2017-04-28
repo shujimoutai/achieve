@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     omniauth_callbacks: "users/omniauth_callbacks"
   }
-  
+
 
   resources :contacts, only: [:new, :create] do
     collection do
@@ -17,15 +17,15 @@ Rails.application.routes.draw do
      post :confirm
     end
   end
-  
+
   root 'top#index'
-  
+
   if Rails.env.development?
    mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
-  
-  resources :poems, only: [:index]
-  
+
+  resources :poems, only: [:index,:show]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
